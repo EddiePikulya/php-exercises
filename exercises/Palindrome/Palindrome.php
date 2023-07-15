@@ -14,4 +14,8 @@ namespace Exercises\Palindrome;
  */
 final class Palindrome
 {
+    public static function check(string $string): bool
+    {
+        return $string === strrev($string);
+    }
 }

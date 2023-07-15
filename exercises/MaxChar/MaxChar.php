@@ -13,4 +13,19 @@ namespace Exercises\MaxChar;
  */
 final class MaxChar
 {
+    public static function get(string $string): string
+    {
+        $array = str_split($string);
+        $counter = [];
+        foreach($array as $let) {
+            if (isset($counter[$let])) {
+                ++$counter[$let];
+                continue;
+            }
+
+            $counter[$let] = 1;
+        }
+        arsort($counter);
+        return (string)array_key_first($counter);
+    }
 }

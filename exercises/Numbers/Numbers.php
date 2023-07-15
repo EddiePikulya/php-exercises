@@ -10,4 +10,13 @@ namespace Exercises\Numbers;
  */
 final class Numbers
 {
+    public static function add(int $n): int
+    {
+        $result = 0;
+        for($i=0; $i <= $n; $i++) {
+            $result+=$i;
+        }
+
+        return $result;
+    }
 }
