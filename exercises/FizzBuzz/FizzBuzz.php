@@ -15,4 +15,17 @@ namespace Exercises\FizzBuzz;
  */
 final class FizzBuzz
 {
+    public static function print(int $limit): void
+    {
+        for ($i=1;$i<=$limit;$i++) {
+            $print = match (0) {
+                $i%3 + $i%5 => 'fizzbuzz',
+                $i%3 => 'fizz',
+                $i%5 => 'buzz',
+                default => $i
+            };
+            echo $print;
+        }
+    }
+
 }
